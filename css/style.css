@@ -1,0 +1,118 @@
+/*Google Font Poppins*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
+  /*Colors*/
+  --primary: hsl(257, 40%, 49%);
+  --secondary: hsl(300, 69%, 71%);
+  --text: hsl(255, 0%, 100%);
+
+  /*Font*/
+  --font: "Poppins", sans-serif;
+  --font-2: "Open Sans", sans-serif;
+
+  /*Sizes*/
+  --xs: 0.75rem;
+  --sm: 1rem;
+  --md: 1.5rem;
+  --lg: 2rem;
+  --xl: 3rem;
+  --xxl: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--primary);
+}
+
+body {
+  font-family: var(--font-2);
+  font-weight: 400;
+}
+
+/*Mobile First Aproach*/
+
+@media screen and (min-width: 375px) {
+  .mobile {
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  header > .logo {
+    width: 100px;
+    margin-bottom: 3rem;
+  }
+
+  .hero__content--left {
+    display: flex;
+    margin-bottom: 3rem;
+  }
+  .hero__content--left > .content__illustration {
+    width: 300px;
+  }
+
+  .hero__content--right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero__content--right > .content__title {
+    width: 300px;
+    color: var(--text);
+    font: 600 var(--md) var(--font);
+  }
+
+  .hero__content--right > .content__description {
+    width: 300px;
+    color: var(--text);
+    font: 400 var(--sm) var(--font-2);
+    margin-top: var(--md);
+  }
+
+  .hero__content--right > .content__button {
+    width: 200px;
+    margin-top: var(--md);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 30px;
+    background: var(--text);
+    color: var(--primary);
+    font: 400 var(--sm) var(--font-2);
+  }
+
+  footer > .footer__social--links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  footer > .footer__social--links > a {
+    text-decoration: none;
+  }
+
+  footer > .footer__social--links > a > .icon {
+    color: var(--text);
+    border: 1px solid var(--text);
+    padding: 0.3rem;
+    border-radius: 50%;
+  }
+
+  .footer__attribution {
+    font: 400 var(--xs) var(--font-2);
+    text-align: center;
+    color: var(--text);
+  }
+
+  .footer__attribution > .attribution > a {
+    text-decoration: none;
+    color: var(--secondary);
+  }
+}
